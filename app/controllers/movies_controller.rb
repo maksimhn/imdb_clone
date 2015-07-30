@@ -8,6 +8,14 @@ class MoviesController < ApplicationController
     render json: Movie.find(params[:id])
   end
 
+  def new
+    @movie = Movie.new()
+  end
+
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
   def create
     movie = Movie.create(movie_params)
     if movie.save
@@ -36,6 +44,6 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:title, :description, :release_year,
-                                  :mpaa_rating, :length)
+                                  :mpaa_rating, :length, :poster)
   end
 end

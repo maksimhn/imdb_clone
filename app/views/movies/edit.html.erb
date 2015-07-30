@@ -1,0 +1,16 @@
+<%= form_for @movie, :html => { :multipart => true } do |form| %>
+    <%= form.label :title%>
+    <%= form.text_field :title%>
+    <%= form.label :description%>
+    <%= form.text_field :description%>
+    <%= form.label :release_year%>
+    <%= form.text_field :release_year%>
+    <%= form.label :mpaa_rating%>
+    <%= form.text_field :mpaa_rating%>
+    <%= form.label :length%>
+    <%= form.text_field :length%>
+    <%= form.label 'Upload Poster'%>
+    <%= form.file_field :poster%>
+    <%= form.submit 'Update Movie' %>
+    <%= link_to 'Back', movies_path, class: 'button' %>
+  <% end %>

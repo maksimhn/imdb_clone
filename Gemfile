@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'aws-sdk-v1'
+gem 'dotenv-rails'
+
 gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 group :development, :test do
